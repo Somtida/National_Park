@@ -1,0 +1,21 @@
+export default {
+  // Functions return fixtures
+  // getCity: (city) => {
+  //   // This fixture only supports Boise or else returns toronto
+  //   const boiseData = require('../Fixtures/boise.json')
+      // const torontoData = require('../Fixtures/toronto.json')
+  //   return {
+  //     ok: true,
+  //     data: city.toLowerCase() === 'boise' ? boiseData : torontoData
+  //   }
+  // }
+  getParks: () => {
+    // This fixture only supports Boise or else returns toronto
+    const parksData = require('../Fixtures/data.json')
+    // const torontoData = require('../Fixtures/toronto.json')
+    return {
+      ok: true,
+      data: parksData,
+    }
+  }
+}
