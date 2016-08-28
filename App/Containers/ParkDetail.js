@@ -4,7 +4,8 @@ import {
   Text,
   ActivityIndicator,
   RefreshControl,
-  Image
+  Image,
+  View
 } from 'react-native'
 import { connect } from 'react-redux'
 import Actions from '../Actions/Creators'
@@ -33,9 +34,11 @@ class ParkDetail extends React.Component {
       <ScrollView
         style={styles.container}
       >
-        <Image source={Images[image]}/>
-        <Text>{parkData.name}</Text>
-        <Text>{parkData.data}</Text>
+        <Image source={Images[image]} />
+        <Text style={styles.textTitle}>{parkData.name}</Text>
+        <View style={styles.paper}>
+          <Text style={styles.textDetail}>{parkData.data}</Text>
+        </View>
       </ScrollView>
     )
   }

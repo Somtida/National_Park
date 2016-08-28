@@ -17,6 +17,7 @@ import PresentationScreen from '../Containers/PresentationScreen'
 // import DeviceInfoScreen from '../Containers/DeviceInfoScreen'
 import NationalParks from '../Containers/NationalParks'
 import ParkDetail from '../Containers/ParkDetail'
+import TabMenu from '../Containers/TabMenu'
 /* **************************
 * Documentation: https://github.com/aksonov/react-native-router-flux
 ***************************/
@@ -30,8 +31,10 @@ class NavigationRouter extends Component {
             <Scene initial key='presentationScreen' component={PresentationScreen} title='Ignite' renderLeftButton={NavItems.hamburgerButton} />
             <Scene key='nationalParks' component={NationalParks} title='National Parks' />
             <Scene key='parkDetail' component={ParkDetail} title='Park Detail' />
+            <Scene key='tabMenu' component={TabMenu} title='Tab Menu' />
 
-            {/*<Scene key='componentExamples' component={AllComponentsScreen} title='Components' />
+            {/*
+              <Scene key='componentExamples' component={AllComponentsScreen} title='Components' />
             <Scene key='usageExamples' component={UsageExamplesScreen} title='Usage' rightTitle='Example' onRight={() => window.alert('Example Pressed')} />
             <Scene key='login' component={LoginScreen} title='Login' hideNavBar />
             <Scene key='listviewExample' component={ListviewExample} title='Listview Example' />

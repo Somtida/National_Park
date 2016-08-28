@@ -39,10 +39,13 @@ class PresentationScreen extends React.Component {
           <RoundedButton onPress={this._handleSubmit}>
             National Parks
           </RoundedButton>
+          <RoundedButton onPress={this.props.tabMenu}>
+            TabMenu
+          </RoundedButton>
 
 
-
-          {/*<View style={styles.section} >
+        {/*
+          <View style={styles.section} >
             <Text style={styles.sectionText} >
               Default screens for development, debugging, and alpha testing
               are available below.
@@ -69,10 +72,10 @@ class PresentationScreen extends React.Component {
             Device Info Screen
           </RoundedButton>
           */}
+
           <View style={styles.centered}>
             <Text style={styles.subtitle}>Made with ❤️ by Infinite Red</Text>
           </View>
-
         </ScrollView>
       </View>
     )
@@ -92,6 +95,7 @@ const mapDispatchToProps = (dispatch) => {
     theme: NavigationActions.theme,
     deviceInfo: NavigationActions.deviceInfo,
     nationalParks: NavigationActions.nationalParks,
+    tabMenu: NavigationActions.tabMenu,
     requestParks: () => dispatch(Actions.requestParks())
   }
 }

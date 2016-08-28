@@ -4,6 +4,7 @@ import { Provider } from 'react-redux'
 import Actions from './Actions/Creators'
 import DebugSettings from './Config/DebugSettings'
 import NavigationRouter from './Navigation/NavigationRouter'
+import TabMenu from './Containers/TabMenu'
 // import './Config/PushConfig'
 
 // Styles
@@ -24,10 +25,9 @@ export default class Root extends React.Component {
     return (
       <Provider store={this.props.store}>
         <View style={styles.applicationView}>
-          <StatusBar
-            barStyle='light-content'
-          />
+          <StatusBar />
           <NavigationRouter />
+
         </View>
       </Provider>
     )
