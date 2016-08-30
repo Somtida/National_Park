@@ -8,7 +8,7 @@ const RootStyle = StyleSheet.create({
   container: {
     flex: 1,
     justifyContent: 'center',
-    backgroundColor: Colors.background
+    backgroundColor: '#6b6b47'
   },
   welcome: {
     fontSize: 20,

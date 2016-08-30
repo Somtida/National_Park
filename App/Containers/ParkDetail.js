@@ -34,7 +34,7 @@ class ParkDetail extends React.Component {
       <ScrollView
         style={styles.container}
       >
-        <Image source={Images[image]} />
+        <Image source={Images[image]} style={styles.imageHeader}/>
         <Text style={styles.textTitle}>{parkData.name}</Text>
         <View style={styles.paper}>
           <Text style={styles.textDetail}>{parkData.data}</Text>

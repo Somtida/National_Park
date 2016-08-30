@@ -21,7 +21,7 @@ class TabMenu extends React.Component {
   constructor (props) {
     super(props)
     this.state = {
-      selectedTab: 'tabone',
+      selectedTab: 'nationalParks',
     }
   }
 
@@ -38,32 +38,39 @@ class TabMenu extends React.Component {
   render () {
 
     return (
-      <TabBarIOS>
-        <TabBarIOS.Item
-          systemIcon="history"
+      <TabBarIOS
+        unselectedTintColor="beige"
+        tintColor="white"
+        barTintColor="olivedrab">
+        <Icon.TabBarItemIOS
+          title="Parks"
+          iconName="pagelines"
+          selectedIconName="pagelines"
           selected={this.state.selected === 'nationalParks'}
           onPress={() => this.handleClick('nationalParks')}>
           <View style={styles.container}>
             <NationalParks />
             <Text style={styles.tabText}>nationalPark</Text>
           </View>
-        </TabBarIOS.Item>
-        <TabBarIOS.Item
-          systemIcon="bookmarks"
+        </Icon.TabBarItemIOS>
+        <Icon.TabBarItemIOS
+          title="Map"
+          iconName="map"
+          selectedIconName="map-o"
           selected={this.state.selected === 'tabtwo'}
           onPress={() => this.handleClick('tabtwo')}>
           <View style={styles.container}>
             <Text style={styles.tabText}>bookmarks</Text>
           </View>
-        </TabBarIOS.Item>
-        <TabBarIOS.Item
+        </Icon.TabBarItemIOS>
+        <Icon.TabBarItemIOS
           systemIcon="more"
           selected={this.state.selected === 'tabthree'}
           onPress={() => this.handleClick('tabthree')}>
           <View style={styles.container}>
             <Text style={styles.tabText}>more</Text>
           </View>
-        </TabBarIOS.Item>
+        </Icon.TabBarItemIOS>
       </TabBarIOS>
 
     )

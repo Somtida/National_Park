@@ -76,6 +76,9 @@ class UsageExamplesScreen extends React.Component {
       <RoundedButton onPress={this.props.logout}>
         {I18n.t('logOut')}
       </RoundedButton>
+      <RoundedButton onPress={this.props.mapviewExample}>
+        {I18n.t('logOut')}
+      </RoundedButton>
     )
   }
 

@@ -25,5 +25,5 @@ export default StyleSheet.create({
     margin: 20,
     backgroundColor: '#fff',
     shadowColor: 'grey',
-  }
+  },
 })

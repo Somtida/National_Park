@@ -3,15 +3,14 @@ import { Colors, Metrics, ApplicationStyles } from '../../Themes/'
 
 export default StyleSheet.create({
   container: {
-    flex: 1,
-    marginTop: Metrics.navBarHeight,
-    backgroundColor: Colors.background
+    // flex: 1,
+    backgroundColor: '#6b6b47'
   },
   icon: {
     color: 'white',
   },
   tab: {
-    top: 50,
+    top: 20,
   },
   tabContent: {
     // flex: 2,

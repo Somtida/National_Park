@@ -6,6 +6,7 @@ import RoundedButton from '../Components/RoundedButton'
 import { Actions as NavigationActions } from 'react-native-router-flux'
 import Actions from '../Actions/Creators'
 import NationalParks from './NationalParks'
+import TabMenu from './TabMenu'
 // Styles
 import styles from './Styles/PresentationScreenStyle'
 
@@ -30,10 +31,10 @@ class PresentationScreen extends React.Component {
   render () {
     return (
       <View style={styles.mainContainer}>
-        <Image source={Images.background} style={styles.backgroundImage} resizeMode='stretch' />
+        <Image source={Images.lakeclark} style={styles.backgroundImage} resizeMode='stretch' />
         <ScrollView style={styles.container}>
           <View style={styles.centered}>
-            <Image source={Images.clearLogo} style={styles.logo} />
+            <Image source={Images.logo} style={styles.logo} />
           </View>
 
           <RoundedButton onPress={this._handleSubmit}>
@@ -41,6 +42,12 @@ class PresentationScreen extends React.Component {
           </RoundedButton>
           <RoundedButton onPress={this.props.tabMenu}>
             TabMenu
+          </RoundedButton>
+          <RoundedButton onPress={this.props.mapviewExample}>
+            Mapview Examples
+          </RoundedButton>
+          <RoundedButton onPress={this.props.mapScreen}>
+            Map Screen
           </RoundedButton>
 
 
@@ -77,6 +84,7 @@ class PresentationScreen extends React.Component {
             <Text style={styles.subtitle}>Made with ❤️ by Infinite Red</Text>
           </View>
         </ScrollView>
+        <TabMenu />
       </View>
     )
   }
@@ -96,6 +104,8 @@ const mapDispatchToProps = (dispatch) => {
     deviceInfo: NavigationActions.deviceInfo,
     nationalParks: NavigationActions.nationalParks,
     tabMenu: NavigationActions.tabMenu,
+    mapviewExample: NavigationActions.mapviewExample,
+    mapScreen: NavigationActions.mapScreen,
     requestParks: () => dispatch(Actions.requestParks())
   }
 }

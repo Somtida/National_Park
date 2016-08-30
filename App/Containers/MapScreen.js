@@ -1,10 +1,11 @@
-import React from 'react'
+// import React from 'react'
+import React, { Component } from 'react';
 import { connect } from 'react-redux'
 import { View } from 'react-native'
-import MapView from 'react-native-maps'
+import MapView from 'react-native'
 import { calculateRegion } from '../Lib/MapHelpers'
 import MapCallout from '../Components/MapCallout'
-import Styles from './Styles/MapviewExampleStyle'
+import Styles from './Styles/MapScreenStyle'
 
 /* ***********************************************************
 * IMPORTANT!!! Before you get started, if you are going to support Android,
@@ -16,7 +17,7 @@ import Styles from './Styles/MapviewExampleStyle'
 * https://console.developers.google.com/apis/api/maps_android_backend/
 *************************************************************/
 
-class MapviewExample extends React.Component {
+class MapScreen extends React.Component {
   /* ***********************************************************
   * This example is only intended to get you started with the basics.
   * There are TONS of options available from traffic to buildings to indoors to compass and more!
@@ -30,23 +31,29 @@ class MapviewExample extends React.Component {
     * Set the array of locations to be displayed on your map. You'll need to define at least
     * a latitude and longitude as well as any additional information you wish to display.
     *************************************************************/
-    const locations = [
-      { title: 'Location A', latitude: 37.78825, longitude: -122.4324 },
-      { title: 'Location B', latitude: 36.75825, longitude: -122. }
-    ]
+    // const locations = [
+    //   { title: 'Location A', latitude: 37.78825, longitude: -122.4324 },
+    //   { title: 'Location B', latitude: 37.75825, longitude: -122.4624 }
+    // ]
     /* ***********************************************************
     * STEP 2
     * Set your initial region either by dynamically calculating from a list of locations (as below)
     * or as a fixed point, eg: { latitude: 123, longitude: 123, latitudeDelta: 0.1, longitudeDelta: 0.1}
     *************************************************************/
-    const region = calculateRegion(locations, { latPadding: 0.05, longPadding: 0.05 })
+    // const region = calculateRegion(locations, { latPadding: 0.05, longPadding: 0.05 })
+    // const region = {
+    //   latitude: 37.78825,
+    //   longitude: -122.4324,
+    //   latitudeDelta: 0.0922,
+    //   longitudeDelta: 0.0421,
+    // },
     this.state = {
-      region,
-      locations,
-      showUserLocation: true
+      // region,
+      // locations,
+      // showUserLocation: true
     }
-    this.renderMapMarkers = this.renderMapMarkers.bind(this)
-    this.onRegionChange = this.onRegionChange.bind(this)
+    // this.renderMapMarkers = this.renderMapMarkers.bind(this)
+    // this.onRegionChange = this.onRegionChange.bind(this)
   }
 
   componentWillReceiveProps (newProps) {
@@ -55,9 +62,9 @@ class MapviewExample extends React.Component {
     * If you wish to recenter the map on new locations any time the
     * Redux props change, do something like this:
     *************************************************************/
-    this.setState({
-      region: calculateRegion(newProps.locations, { latPadding: 0.1, longPadding: 0.1 })
-    })
+    // this.setState({
+    //   region: calculateRegion(newProps.locations, { latPadding: 0.1, longPadding: 0.1 })
+    // })
   }
 
   onRegionChange (newRegion) {
@@ -66,12 +73,12 @@ class MapviewExample extends React.Component {
     * If you wish to fetch new locations when the user changes the
     * currently visible region, do something like this:
     *************************************************************/
-    const searchRegion = {
-      ne_lat: newRegion.latitude + newRegion.latitudeDelta,
-      ne_long: newRegion.longitude + newRegion.longitudeDelta,
-      sw_lat: newRegion.latitude - newRegion.latitudeDelta,
-      sw_long: newRegion.longitude - newRegion.longitudeDelta
-    }
+    // const searchRegion = {
+    //   ne_lat: newRegion.latitude + newRegion.latitudeDelta,
+    //   ne_long: newRegion.longitude + newRegion.longitudeDelta,
+    //   sw_lat: newRegion.latitude - newRegion.latitudeDelta,
+    //   sw_long: newRegion.longitude - newRegion.longitudeDelta
+    // }
     // Fetch new data...
   }
 
@@ -102,13 +109,9 @@ class MapviewExample extends React.Component {
     return (
       <View style={Styles.container}>
         <MapView
-          style={Styles.map}
-          initialRegion={this.state.region}
-          onRegionChangeComplete={this.onRegionChange}
-          showsUserLocation={this.state.showUserLocation}
-        >
-          {this.state.locations.map((location) => this.renderMapMarkers(location))}
-        </MapView>
+          style={{height: 200, margin: 40}}
+          showsUserLocation={true}
+        />
       </View>
     )
   }
@@ -120,4 +123,4 @@ const mapStateToProps = (state) => {
   }
 }
 
-export default connect(mapStateToProps)(MapviewExample)
+export default connect(mapStateToProps)(MapScreen)

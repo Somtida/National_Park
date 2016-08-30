@@ -1,10 +1,11 @@
 // leave off @2x/@3x
 const images = {
-  logo: require('../Images/ir.png'),
+  logo: require('../Images/nps_arrowhead_ori.png'),
   clearLogo: require('../Images/top_logo.png'),
   ignite: require('../Images/ignite_logo.png'),
   tile_bg: require('../Images/tile_bg.png'),
   background: require('../Images/BG.png'),
+
   acadia: require('../Images/thumbs/acadia.jpg'),
   americansamoa: require('../Images/thumbs/americansamoa.jpg'),
   arches: require('../Images/thumbs/arches.jpg'),
