@@ -1,7 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { View } from 'react-native'
-import MapView from 'react-native-maps'
+import { View, MapView } from 'react-native'
 import { calculateRegion } from '../Lib/MapHelpers'
 import MapCallout from '../Components/MapCallout'
 import Styles from './Styles/MapviewExampleStyle'
@@ -31,8 +30,8 @@ class MapviewExample extends React.Component {
     * a latitude and longitude as well as any additional information you wish to display.
     *************************************************************/
     const locations = [
-      { title: 'Location A', latitude: 37.78825, longitude: -122.4324 },
-      { title: 'Location B', latitude: 36.75825, longitude: -122. }
+      { title: 'Location A', latitude: 44.35, longitude: -68.21 },
+      { title: 'Location B', latitude: 43.75, longitude: -102.5 }
     ]
     /* ***********************************************************
     * STEP 2
@@ -97,6 +96,7 @@ class MapviewExample extends React.Component {
       </MapView.Marker>
     )
   }
+
 
   render () {
     return (

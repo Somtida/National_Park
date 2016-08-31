@@ -21,7 +21,8 @@ export default class Root extends React.Component {
   }
 
   renderApp () {
-    console.disableYellowBox = !DebugSettings.yellowBox
+    // console.disableYellowBox = !DebugSettings.yellowBox
+    console.disableYellowBox = true
     return (
       <Provider store={this.props.store}>
         <View style={styles.applicationView}>

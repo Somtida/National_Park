@@ -32,9 +32,9 @@ class NavigationRouter extends Component {
             <Scene initial key='presentationScreen' component={PresentationScreen} title='National Park Service' />
             <Scene key='nationalParks' component={NationalParks} title='National Parks' />
             <Scene key='parkDetail' component={ParkDetail} title='Park Detail' />
-            <Scene key='tabMenu' component={TabMenu} title='Tab Menu' />
+            {/* <Scene key='tabMenu' component={TabMenu} title='Tab Menu' /> */}
             <Scene key='mapviewExample' component={MapviewExample} title='Mapview Example' />
-            <Scene key='mapScreen' component={MapviewExample} title='Map Screen' />
+          <Scene key='mapScreen' component={MapScreen} title='Map Screen' />
 
             {/*
               <Scene key='componentExamples' component={AllComponentsScreen} title='Components' />

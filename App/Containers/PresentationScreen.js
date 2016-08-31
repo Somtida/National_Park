@@ -40,9 +40,6 @@ class PresentationScreen extends React.Component {
           <RoundedButton onPress={this._handleSubmit}>
             National Parks
           </RoundedButton>
-          <RoundedButton onPress={this.props.tabMenu}>
-            TabMenu
-          </RoundedButton>
           <RoundedButton onPress={this.props.mapviewExample}>
             Mapview Examples
           </RoundedButton>
@@ -84,7 +81,6 @@ class PresentationScreen extends React.Component {
             <Text style={styles.subtitle}>Made with ❤️ by Infinite Red</Text>
           </View>
         </ScrollView>
-        <TabMenu />
       </View>
     )
   }
