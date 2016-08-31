@@ -11,4 +11,10 @@ export default StyleSheet.create({
   centered: {
     alignItems: 'center'
   },
+  textStyle: {
+    color: '#fff',
+    fontSize: 18,
+    fontWeight: 'bold',
+    margin: 10,
+  }
 })

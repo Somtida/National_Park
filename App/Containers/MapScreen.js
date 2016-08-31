@@ -1,9 +1,13 @@
 import React, { PropTypes } from 'react'
 import { connect } from 'react-redux'
+import Actions from '../Actions/Creators'
+import { Actions as NavigationActions } from 'react-native-router-flux'
 import {
   View,
   MapView,
   Image,
+  TouchableOpacity,
+  Text,
 } from 'react-native'
 
 import Styles from './Styles/MapScreenStyle'
@@ -19,10 +23,19 @@ class MapScreen extends React.Component {
     image: require('../Images/nps_arrowhead_a.png'),
   };
 
+  _showParkDetail = (id) => {
+    console.log('id:',id);
+    const data = this.props.parks[id]
+    this.props.parkData(data)
+    NavigationActions.parkDetail()
+  }
+
   render() {
     // console.log('parks:', this.props.parks);
+    console.log('annotations:', this.state.annotations);
     return (
       <View>
+        {/* <TouchableOpacity onPress={() => this._showParkDetail(this.state.annotations.id)}> */}
         <MapView
           style={Styles.map}
           onRegionChange={this._onRegionChange}
@@ -30,25 +43,22 @@ class MapScreen extends React.Component {
           region={this.state.mapRegion}
           annotations={this.state.annotations}
         />
-          {/* <MapView.Marker>
-            <Image source={Images.pin} />
-          </MapView.Marker>
-        </MapView> */}
       </View>
     );
   }
 
   _getAnnotations = (region) => {
-    console.log('parks:', this.props.parks);
     const parks = this.props.parks;
     return parks.map(park => {
       return {
         longitude: park.long,
         latitude: park.lat,
         title: park.name,
+        id: park.id.toString(),
+        onFocus: () => this._showParkDetail(park.id),
       }
     })
-    
+
   };
 
   _onRegionChange = (region) => {
@@ -101,4 +111,10 @@ const mapStateToProps = (state) => {
   }
 }
 
-export default connect(mapStateToProps)(MapScreen)
+const mapDispatchToProps = (dispatch) => {
+  return {
+    parkData: (data) => dispatch(Actions.parkData(data))
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(MapScreen)

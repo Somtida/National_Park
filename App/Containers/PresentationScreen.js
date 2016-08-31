@@ -35,6 +35,7 @@ class PresentationScreen extends React.Component {
         <ScrollView style={styles.container}>
           <View style={styles.centered}>
             <Image source={Images.logo} style={styles.logo} />
+          <Text style={styles.textStyle}>Welcome to National Park Service App</Text>
           </View>
 
           <RoundedButton onPress={this._handleSubmit}>

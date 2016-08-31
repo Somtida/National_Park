@@ -27,9 +27,9 @@ class NavigationRouter extends Component {
   render () {
     return (
       <Router>
-
+        <Scene key='drawer' component={NavigationDrawer}>
           <Scene key='drawerChildrenWrapper' navigationBarStyle={Styles.navBar} titleStyle={Styles.title} leftButtonIconStyle={Styles.leftButton} rightButtonTextStyle={Styles.rightButton}>
-            <Scene initial key='presentationScreen' component={PresentationScreen} title='National Park Service' />
+            <Scene initial key='presentationScreen' component={PresentationScreen} title='National Park Service' renderLeftButton={NavItems.hamburgerButton} />
             <Scene key='nationalParks' component={NationalParks} title='National Parks' />
             <Scene key='parkDetail' component={ParkDetail} title='Park Detail' />
             {/* <Scene key='tabMenu' component={TabMenu} title='Tab Menu' /> */}
@@ -46,7 +46,7 @@ class NavigationRouter extends Component {
             <Scene key='theme' component={ThemeScreen} title='Theme' />
             <Scene key='deviceInfo' component={DeviceInfoScreen} title='Device Info' />*/}
           </Scene>
-
+        </Scene>
       </Router>
     )
   }
