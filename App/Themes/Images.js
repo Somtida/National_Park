@@ -5,6 +5,7 @@ const images = {
   ignite: require('../Images/ignite_logo.png'),
   tile_bg: require('../Images/tile_bg.png'),
   background: require('../Images/BG.png'),
+  pin: require('../Images/nps_arrowhead_a.png'),
 
   acadia: require('../Images/thumbs/acadia.jpg'),
   americansamoa: require('../Images/thumbs/americansamoa.jpg'),

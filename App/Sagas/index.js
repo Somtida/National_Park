@@ -16,7 +16,7 @@ const api = FixtureAPI
 
 // start the daemons
 export default function * root () {
-  // yield fork(watchStartup)
+  yield fork(watchStartup)
   // yield fork(watchLoginAttempt)
   // yield fork(getCityWeather(api).watcher)
   yield fork(getPark(api).watcher)

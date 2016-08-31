@@ -3,10 +3,11 @@ import { connect } from 'react-redux'
 import {
   View,
   MapView,
+  Image,
 } from 'react-native'
 
 import Styles from './Styles/MapScreenStyle'
-
+import { Images } from '../Themes'
 
 
 class MapScreen extends React.Component {
@@ -15,6 +16,7 @@ class MapScreen extends React.Component {
     mapRegion: undefined,
     mapRegionInput: undefined,
     annotations: [],
+    image: require('../Images/nps_arrowhead_a.png'),
   };
 
   render() {
@@ -28,23 +30,25 @@ class MapScreen extends React.Component {
           region={this.state.mapRegion}
           annotations={this.state.annotations}
         />
+          {/* <MapView.Marker>
+            <Image source={Images.pin} />
+          </MapView.Marker>
+        </MapView> */}
       </View>
     );
   }
 
   _getAnnotations = (region) => {
-    return [
-      {
-        longitude: -122,
-        latitude: 37,
-        title: 'You Are Here',
-      },
-      {
-        longitude: -68.21,
-        latitude: 44.35,
-        title: 'NY',
-      },
-    ];
+    console.log('parks:', this.props.parks);
+    const parks = this.props.parks;
+    return parks.map(park => {
+      return {
+        longitude: park.long,
+        latitude: park.lat,
+        title: park.name,
+      }
+    })
+    
   };
 
   _onRegionChange = (region) => {
@@ -93,7 +97,7 @@ class MapScreen extends React.Component {
 
 const mapStateToProps = (state) => {
   return {
-    // parks: state.park.parks;
+    parks: state.park.parks
   }
 }
 
