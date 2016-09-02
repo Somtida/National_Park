@@ -10,13 +10,14 @@ export default StyleSheet.create({
   textTitle: {
     marginTop: 20,
     paddingLeft: 20,
-    color: '#000',
-    fontSize: 28,
+    color: '#49612d',
+    fontSize: 30,
+    fontWeight: 'bold',
   },
   subtextTitle: {
     paddingLeft: 20,
     color: 'darkslategray',
-    fontSize: 20,
+    fontSize: 16,
     fontStyle: 'italic',
   },
   textDetail: {
