@@ -2,9 +2,9 @@ import {Colors} from '../../Themes/'
 
 export default {
   drawer: {
-    backgroundColor: '#6b6b47',
+    backgroundColor: '#49612d',
   },
   main: {
-    backgroundColor: '#6b6b47',
+    backgroundColor: '#49612d',
   }
 }

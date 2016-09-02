@@ -29,16 +29,19 @@ class ParkDetail extends React.Component {
     // console.log('this.props.parkData:',parkData);
     // console.log('image:',parkData.image.replace('.jpg',''));
     const image = parkData.image.replace('.jpg','')+'Head'
-    console.log('image:',image);
+    // console.log('image:',image);
     return (
       <ScrollView
         style={styles.container}
       >
         <Image source={Images[image]} style={styles.imageHeader}/>
         <Text style={styles.textTitle}>{parkData.name}</Text>
+        <Text style={styles.subtextTitle}>{parkData.state}</Text>
         <View style={styles.paper}>
           <Text style={styles.textDetail}>{parkData.data}</Text>
+          <Text style={styles.datetextDetail}>Created Date: {parkData.createDate}</Text>
         </View>
+
       </ScrollView>
     )
   }

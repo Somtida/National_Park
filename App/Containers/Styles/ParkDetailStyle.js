@@ -13,7 +13,19 @@ export default StyleSheet.create({
     color: '#000',
     fontSize: 28,
   },
+  subtextTitle: {
+    paddingLeft: 20,
+    color: 'darkslategray',
+    fontSize: 20,
+    fontStyle: 'italic',
+  },
   textDetail: {
+    color: 'darkslategrey',
+    fontWeight: '300',
+    fontSize: 16,
+    padding: 10,
+  },
+  datetextDetail: {
     color: 'darkslategrey',
     fontWeight: '300',
     fontSize: 16,

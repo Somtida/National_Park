@@ -25,12 +25,12 @@ class DrawerContent extends Component {
     return (
       <ScrollView style={styles.container}>
         <Image source={Images.logo} style={styles.logo} />
-      {/* <DrawerButton iconName='pagelines' text='National Parks' onPress={this.handlePressNationalParks} /> */}
-      {/* <DrawerButton text='Map' onPress={this.handlePressMapScreen} /> */}
+      <DrawerButton iconName='pagelines' text='National Parks' onPress={this.handlePressNationalParks} />
+      <DrawerButton text='Map' onPress={this.handlePressMapScreen} />
     {/* <DrawerButton text='Map' onPress={this.handlePressMapScreen} /> */}
       {/* <Icon name="ios-person" size={30} color="#4F8EF7" /> */}
     {/* </DrawerButton> */}
-        <Icon.Button
+        {/* <Icon.Button
           name="pagelines"
           style={styles.iconButtonStyle}
           onPress={this.handlePressNationalParks} >
@@ -41,7 +41,7 @@ class DrawerContent extends Component {
           style={styles.iconButtonStyle}
           onPress={this.handlePressMapScreen} >
           <Text style={styles.textIcon}>Map</Text>
-        </Icon.Button>
+        </Icon.Button> */}
       </ScrollView>
     )
   }
