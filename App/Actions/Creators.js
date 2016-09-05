@@ -2,8 +2,8 @@ import Types from './Types'
 
 const startup = () => ({ type: Types.STARTUP })
 
-const requestTemperature = (city) => ({ type: Types.TEMPERATURE_REQUEST, city })
-const receiveTemperature = (temperature) => ({ type: Types.TEMPERATURE_RECEIVE, temperature })
+const requestTemperature = (position) => ({ type: Types.TEMPERATURE_REQUEST, position })
+const receiveTemperature = (temperature) => ({ type: Types.TEMPERATURE_RECEIVE, ...temperature })
 const receiveTemperatureFailure = () => ({ type: Types.TEMPERATURE_FAILURE })
 
 const requestParks = () => ({ type: Types.PARKS_REQUEST })

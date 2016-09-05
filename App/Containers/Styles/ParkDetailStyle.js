@@ -39,4 +39,7 @@ export default StyleSheet.create({
     backgroundColor: '#fff',
     shadowColor: 'grey',
   },
+  weatherStyle: {
+    alignSelf: 'center',
+  },
 })

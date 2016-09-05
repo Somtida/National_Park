@@ -5,12 +5,13 @@ import {
   ActivityIndicator,
   RefreshControl,
   Image,
-  View
+  View,
 } from 'react-native'
 import { connect } from 'react-redux'
 import Actions from '../Actions/Creators'
 import { Actions as NavigationActions } from 'react-native-router-flux'
 import { Images } from '../Themes'
+import Icon from 'react-native-vector-icons/FontAwesome';
 
 // Styles
 import styles from './Styles/ParkDetailStyle'
@@ -22,6 +23,16 @@ class ParkDetail extends React.Component {
     this.state = {
       // refreshing: false
     }
+  }
+
+  _showWeater = (lat,lng) => {
+    console.log(lat,lng);
+    const position = {
+      lat: lat,
+      lng: lng,
+    }
+    const { requestTemperature } = this.props
+    requestTemperature(position)
   }
 
   render () {
@@ -41,6 +52,10 @@ class ParkDetail extends React.Component {
           <Text style={styles.textDetail}>{parkData.data}</Text>
           <Text style={styles.datetextDetail}>Created Date: {parkData.createDate}</Text>
         </View>
+        <Icon.Button name="pagelines" backgroundColor="#49612d" onPress={() => this._showWeater(parkData.lat,parkData.long)} style={styles.weatherStyle}>
+          Weather forecast
+        </Icon.Button>
+
 
       </ScrollView>
     )
@@ -55,6 +70,7 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
+    requestTemperature: (lat,lng) => dispatch(Actions.requestTemperature(lat,lng))
   }
 }
 

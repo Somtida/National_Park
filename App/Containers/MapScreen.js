@@ -32,7 +32,7 @@ class MapScreen extends React.Component {
 
   render() {
     // console.log('parks:', this.props.parks);
-    console.log('annotations:', this.state.annotations);
+    // console.log('annotations:', this.state.annotations);
     return (
       <View>
         {/* <TouchableOpacity onPress={() => this._showParkDetail(this.state.annotations.id)}> */}
