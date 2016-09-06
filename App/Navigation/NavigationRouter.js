@@ -13,6 +13,7 @@ import NationalParks from '../Containers/NationalParks'
 import ParkDetail from '../Containers/ParkDetail'
 import TabMenu from '../Containers/TabMenu'
 import MapScreen from '../Containers/MapScreen'
+import Weather from '../Containers/Weather'
 /* **************************
 * Documentation: https://github.com/aksonov/react-native-router-flux
 ***************************/
@@ -28,7 +29,8 @@ class NavigationRouter extends Component {
             <Scene key='nationalParks' component={NationalParks} title='National Parks' />
             <Scene key='parkDetail' component={ParkDetail} title='Park Detail' />
             <Scene key='mapviewExample' component={MapviewExample} title='Mapview Example' />
-          <Scene key='mapScreen' component={MapScreen} title='Map Screen' />
+            <Scene key='mapScreen' component={MapScreen} title='Map Screen' />
+            <Scene key='weather' component={Weather} title='Weather Forecast' />
           </Scene>
         </Scene>
       </Router>

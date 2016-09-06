@@ -9,7 +9,7 @@ export default combineReducers({
   // weather: WeatherReducer,
   park: ParkReducer,
   parkData: ParkDataReducer,
-  weather: WeatherReducer,
+  forecastweather: WeatherReducer,
 
 })
 

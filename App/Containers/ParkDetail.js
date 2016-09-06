@@ -33,6 +33,7 @@ class ParkDetail extends React.Component {
     }
     const { requestTemperature } = this.props
     requestTemperature(position)
+    NavigationActions.weather()
   }
 
   render () {

@@ -10,8 +10,9 @@ export default (api) => {
     //
     console.log('response:',response)
     if (response.ok) {
+      // console.log('response.data:',response.data);
       const result = response.data
-      console.log('result:',result);
+      console.log('result in getWeatherSaga:',result);
       yield put(Actions.receiveTemperature({ result }))
     } else {
       yield put(Actions.receiveTemperatureFailure())

@@ -16,12 +16,14 @@ const request = (state, action) =>
   })
 
 // receive temp
-const receive = (state, action) =>
-  state.merge({
+const receive = (state, action) => {
+  console.log('in WeatherReducer:', action.result);
+  return state.merge({
     fetching: false,
     error: null,
-    result: action.result
+    result: action.result.forecast,
   })
+}
 
 // temp failure
 const failure = (state, action) =>
