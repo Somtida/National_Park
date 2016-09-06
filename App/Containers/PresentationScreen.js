@@ -41,9 +41,9 @@ class PresentationScreen extends React.Component {
           <RoundedButton onPress={this._handleSubmit}>
             National Parks
           </RoundedButton>
-          <RoundedButton onPress={this.props.mapviewExample}>
+          {/* <RoundedButton onPress={this.props.mapviewExample}>
             Mapview Examples
-          </RoundedButton>
+          </RoundedButton> */}
           <RoundedButton onPress={this.props.mapScreen}>
             Map Screen
           </RoundedButton>
