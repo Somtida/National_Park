@@ -55,7 +55,7 @@ class MapScreen extends React.Component {
         latitude: park.lat,
         title: park.name,
         id: park.id.toString(),
-        // image: this.state.image,
+        image: this.state.image,
         detailCalloutView: <TouchableOpacity onPress={() => this._showParkDetail(park.id)} ><Text>More...</Text></TouchableOpacity>
         // onFocus: () => this._showParkDetail(park.id),
       }

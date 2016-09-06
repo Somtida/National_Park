@@ -61,12 +61,11 @@ class Weather extends React.Component {
       <ScrollView style={styles.container}>
       { weather ?
         <View>
-        <Text style={styles.paper}>Weather Container</Text>
         <View style={styles.paper}>
           <Text style={styles.temp}>
-            <Icon name="arrow-circle-up" size={22} color="#900" style={styles.pad}/>
+            <Icon name="arrow-circle-up" size={20} color="#900" style={styles.pad}/>
             {this.props.weather.simpleforecast.forecastday[0].high.fahrenheit}
-            <Icon name="arrow-circle-down" size={22} color="#900" style={styles.pad}/>
+            <Icon name="arrow-circle-down" size={20} color="#900" style={styles.pad}/>
             {this.props.weather.simpleforecast.forecastday[0].low.fahrenheit}
           </Text>
           <Text style={styles.date}>
@@ -88,9 +87,9 @@ class Weather extends React.Component {
 
         <View style={styles.paper}>
           <Text style={styles.temp}>
-            <Icon name="arrow-circle-up" size={22} color="#900" style={styles.pad}/>
+            <Icon name="arrow-circle-up" size={20} color="#900" style={styles.pad}/>
             {this.props.weather.simpleforecast.forecastday[1].high.fahrenheit}
-            <Icon name="arrow-circle-down" size={22} color="#900" style={styles.pad}/>
+            <Icon name="arrow-circle-down" size={20} color="#900" style={styles.pad}/>
             {this.props.weather.simpleforecast.forecastday[1].low.fahrenheit}
           </Text>
           <Text style={styles.date}>
@@ -113,9 +112,9 @@ class Weather extends React.Component {
 
         <View style={styles.paper}>
           <Text style={styles.temp}>
-            <Icon name="arrow-circle-up" size={22} color="#900" style={styles.pad}/>
+            <Icon name="arrow-circle-up" size={20} color="#900" style={styles.pad}/>
             {this.props.weather.simpleforecast.forecastday[2].high.fahrenheit}
-            <Icon name="arrow-circle-down" size={22} color="#900" style={styles.pad}/>
+            <Icon name="arrow-circle-down" size={20} color="#900" style={styles.pad}/>
             {this.props.weather.simpleforecast.forecastday[2].low.fahrenheit}
           </Text>
           <Text style={styles.date}>
@@ -137,9 +136,9 @@ class Weather extends React.Component {
 
         <View style={styles.paper}>
           <Text style={styles.temp}>
-            <Icon name="arrow-circle-up" size={22} color="#900" style={styles.pad}/>
+            <Icon name="arrow-circle-up" size={20} color="#900" style={styles.pad}/>
             {this.props.weather.simpleforecast.forecastday[3].high.fahrenheit}
-            <Icon name="arrow-circle-down" size={22} color="#900" style={styles.pad}/>
+            <Icon name="arrow-circle-down" size={20} color="#900" style={styles.pad}/>
             {this.props.weather.simpleforecast.forecastday[3].low.fahrenheit}
           </Text>
           <Text style={styles.date}>

@@ -45,7 +45,7 @@ class PresentationScreen extends React.Component {
             Mapview Examples
           </RoundedButton> */}
           <RoundedButton onPress={this.props.mapScreen}>
-            Map Screen
+            Map
           </RoundedButton>
 
 
@@ -79,7 +79,7 @@ class PresentationScreen extends React.Component {
           */}
 
           <View style={styles.centered}>
-            <Text style={styles.subtitle}>Made with ❤️ by Infinite Red</Text>
+            <Text style={styles.subtitle}>Made with ❤️ by Somtida</Text>
           </View>
         </ScrollView>
       </View>

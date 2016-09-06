@@ -25,20 +25,21 @@ export default StyleSheet.create({
   temp: {
     fontWeight: 'bold',
     color: 'green',
-    fontSize: 24,
+    fontSize: 20,
     alignSelf: 'center',
   },
   date: {
     alignSelf: 'center',
-    fontSize: 14,
+    fontSize: 10,
     color: 'gray',
   },
   day: {
-    fontSize: 17,
+    fontSize: 14,
     color: 'forestgreen',
-    fontWeight: 'bold',
+    // fontWeight: 'bold',
   },
   desc: {
-    paddingLeft: 25,
+    paddingLeft: 20,
+    fontSize: 12,
   }
 })
